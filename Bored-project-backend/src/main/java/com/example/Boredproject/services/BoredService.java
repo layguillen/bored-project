@@ -12,7 +12,8 @@ public class BoredService {
     //RestTemplate is how we communicate with API
     RestTemplate restTemplate = new RestTemplate();
 
-    public Activity getActivity(){
+    public Activity loadActivity(){
+
         return null;
     }
 }
