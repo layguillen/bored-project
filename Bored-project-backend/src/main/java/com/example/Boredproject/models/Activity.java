@@ -1,11 +1,17 @@
 package com.example.Boredproject.models;
 
-public class Activity {
+import com.fasterxml.jackson.annotation.JsonProperty;
 
+public class Activity {
+    @JsonProperty("activity")
     private String activity;
+    @JsonProperty("type")
     private String type;
+    @JsonProperty("participants")
     private int participants;
+    @JsonProperty("price")
     private double price;
+    @JsonProperty("key")
     private int key;
 
 
