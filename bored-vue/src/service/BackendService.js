@@ -9,16 +9,18 @@ export default{
     viewActivityFromAPI(){
         return http.get("/activity");
     },
-    // addMovieToDatabase(movie){
-    //     return http.post("/add-movie", movie);
-    // },
+    addActivityToDb(activity){
+        return http.post("/add-activity", activity);
+    },
+    getActivitiesFromDb(){
+        return http.get("/all-activities");
+    },
+
     // getQuotesByMovie(id){
     //     return http.get(`/quotesByMovie/${id}`);
     // },
     // getAllQuotes(){
     //     return http.get("/quote")
     // },
-    // getAllCharacters(){
-    //     return http.get("/character")
-    // }
+   
 }

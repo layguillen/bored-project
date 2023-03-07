@@ -3,6 +3,7 @@ package com.example.Boredproject.models;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Activity {
+    private int activityId;
     @JsonProperty("activity")
     private String activity;
     @JsonProperty("type")
@@ -14,6 +15,13 @@ public class Activity {
     @JsonProperty("key")
     private int key;
 
+    public int getActivityId() {
+        return activityId;
+    }
+
+    public void setActivityId(int activityId) {
+        this.activityId = activityId;
+    }
 
     public String getActivity() {
         return activity;
@@ -44,7 +52,7 @@ public class Activity {
     }
 
     public void setPrice(double price) {
-        this.price = price;
+        this.price = price * 100;
     }
 
     public int getKey() {
