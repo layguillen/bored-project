@@ -46,6 +46,8 @@ public class JdbcActivityDao implements ActivityDao{
         return null;
     }
 
+
+
     @Override
     public List<Activity> getAllActivities() {
         String sql = " SELECT * FROM activity ";
@@ -56,6 +58,13 @@ public class JdbcActivityDao implements ActivityDao{
         }
 
         return activityList;
+    }
+
+    @Override
+    public void deleteActivity(int activityKey) {
+        String sql = " DELETE FROM activity " +
+                    " WHERE activity_key = ? ";
+        jdbcTemplate.update(sql, activityKey);
     }
 
     private Activity mapRowToMovie(SqlRowSet result){

@@ -25,4 +25,9 @@ public class DatabaseController {
     public List<Activity> getActivitiesFromDatabase(){
         return activityDao.getAllActivities();
     }
+
+    @DeleteMapping("/delete/{key}")
+    public void deleteActivity(@PathVariable int key){
+        activityDao.deleteActivity(key);
+    }
 }

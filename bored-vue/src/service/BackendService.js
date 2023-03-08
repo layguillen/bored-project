@@ -15,6 +15,9 @@ export default{
     getActivitiesFromDb(){
         return http.get("/all-activities");
     },
+    removeActivity(key){
+        return http.delete(`/delete/${key}`);
+    }
 
     // getQuotesByMovie(id){
     //     return http.get(`/quotesByMovie/${id}`);

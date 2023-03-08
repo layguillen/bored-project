@@ -13,4 +13,6 @@ public interface ActivityDao {
     Activity getActivityById(int id);
 
     List<Activity> getAllActivities();
+
+    void deleteActivity(int activityKey);
 }
