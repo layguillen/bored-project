@@ -14,12 +14,13 @@ public class DatabaseController {
 
     @Autowired
     private ActivityDao activityDao;
+
     @PostMapping("/add-activity")
     @ResponseStatus(HttpStatus.CREATED) //returns a 201 status
     public Activity addActivityToDatabase(@RequestBody Activity activity){
         return activityDao.addActivity(activity);
     }
-    
+
     @GetMapping("/all-activities")
     public List<Activity> getActivitiesFromDatabase(){
         return activityDao.getAllActivities();

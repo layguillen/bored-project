@@ -3,12 +3,20 @@ package com.example.Boredproject.daos;
 import com.example.Boredproject.models.Activity;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.rowset.SqlRowSet;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
 
+
+@Component
 public class JdbcActivityDao implements ActivityDao{
     private JdbcTemplate jdbcTemplate;
+
+    //constructor, dependency injection (letting Spring handle setting up Jdbc Template for us)
+    public JdbcActivityDao(JdbcTemplate jdbcTemplate) {
+        this.jdbcTemplate = jdbcTemplate;
+    }
 
     @Override
     public Activity loadActivity() {

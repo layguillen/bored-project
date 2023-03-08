@@ -5,7 +5,7 @@
         <h2>Type: {{ Activity.type }}</h2>
         <h2>$ {{ Activity.price }}</h2>
         <h3>Number of participants: {{ Activity.participants }}</h3>
-        <button class="add-botton">Add to Favorites</button>
+        <button class="add-botton" v-on:click="addActivity(Activity)">Add to Favorites</button>
     </div>
 </template>
 
@@ -24,8 +24,15 @@ import BackendService from '@/service/BackendService';
                 this.Activity = response.data;
             })
         }, 
-        methods(){
+        methods: {
             // TODO: add method to add activity to favorites (post to DB)
+            addActivity(activity){
+                BackendService.addActivityToDb(activity).then((response)=>{
+                    if(response.status === 201){
+                        alert("Activity added!");
+                    }
+                })
+            }
         }
     }
 </script>
