@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="home-view">
     <h1>Your saved activities:</h1>
     <HomeContent />
   </div>
@@ -16,3 +16,10 @@ export default {
   }
 }
 </script>
+
+<style >
+body{
+    background-color: rgba(0, 128, 0, 0.3);
+   
+}
+</style>

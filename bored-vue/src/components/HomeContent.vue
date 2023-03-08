@@ -1,10 +1,11 @@
 <template>
-    <div class="activity-container">
-    <!-- TODO: check if activity.id is correct for key -->
-        <div v-for="activity in Activities" :key="activity.id">
+    <div class="home-content">
+        <div class="activity-container" v-for="activity in Activities" :key="activity.id">
             <div class="activity-info">
                 <h1>{{ activity.activity }}</h1>
-                <h2>{{ activity.type }}</h2>
+                <h2>Type: {{ activity.type }}</h2>
+                <p>Participants: {{ activity.participants }}</p>
+                <!-- <p>Cost: ${{ activity.price }}</p> -->
             </div>
         </div>
     </div>
@@ -29,5 +30,19 @@ import BackendService from '@/service/BackendService';
 </script>
 
 <style scoped>
+
+.home-content{
+    display: flex;
+    flex-wrap: flex;
+}
+
+.activity-container{
+    border: 2px solid rgb(165, 143, 243);
+    border-radius: 10px;
+    margin: 30px 50px;
+    padding: 10px;
+    background-color: rgb(179, 135, 220, 0.6);
+}
+
 
 </style>  
