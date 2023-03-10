@@ -45,8 +45,8 @@ import BackendService from '@/service/BackendService';
 <style scoped>
 
 .home-content{
-    display: flex;
-    flex-wrap: flex;
+    /* display: flex;
+    flex-wrap: flex; */
 }
 
 .activity-container{

@@ -20,7 +20,14 @@ public class BoredService {
 
     public Activity loadActivity(){
         ResponseEntity<Activity> responseEntity =
-                restTemplate.exchange(BORED_API, HttpMethod.GET, makeEntity(), Activity.class);
+                restTemplate.exchange(BORED_API + "/", HttpMethod.GET, makeEntity(), Activity.class);
+        Activity activity = responseEntity.getBody();
+        return activity;
+    }
+
+    public Activity loadActivityByType(String type){
+        ResponseEntity<Activity> responseEntity =
+                restTemplate.exchange(BORED_API + "?type=" + type, HttpMethod.GET, makeEntity(), Activity.class);
         Activity activity = responseEntity.getBody();
         return activity;
     }

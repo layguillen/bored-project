@@ -17,6 +17,9 @@ export default{
     },
     removeActivity(key){
         return http.delete(`/delete/${key}`);
+    },
+    getActivityByType(type){
+        return http.get(`/activity/${type}`);
     }
 
     // getQuotesByMovie(id){
