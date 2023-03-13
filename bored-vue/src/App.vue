@@ -1,10 +1,13 @@
 <template>
   <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> |
-      <router-link to="/bored">Bored?</router-link>
-    </nav>
+    <div class="header">
+      <h1>UN-BORED</h1>
+      <nav>
+        <router-link to="/">Home</router-link> |
+        <router-link to="/about">About</router-link> |
+        <router-link to="/bored">Bored?</router-link>
+      </nav>
+    </div>
     <router-view/>
   </div>
 </template>
@@ -16,6 +19,18 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  margin-right: 20px;
+  margin-left: 20px;
+  color: rgb(48, 56, 48);
+  background-color: #9385cf;
+  padding: 5px 20px;
+  border-radius: 5px;
 }
 
 nav {

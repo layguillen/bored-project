@@ -1,6 +1,7 @@
 <template>
   <div class="about">
-    <h1>Get un-bored.</h1>
+    <h1>Get un-bored | Stay un-bothered</h1>
+    <p>The website for those who are feeling bored.</p>
   </div>
 </template>
 
