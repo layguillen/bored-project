@@ -17,7 +17,4 @@ export default{
 
 <style>
 
-
-
-
 </style>
