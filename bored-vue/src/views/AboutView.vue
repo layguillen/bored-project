@@ -11,4 +11,8 @@
 
 <style>
 
+.about{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 </style>

@@ -20,7 +20,7 @@
             <h2>Type: {{ ActivityByType.type }}</h2>
             <h2>$ {{ ActivityByType.price }}</h2>
             <h3>Number of participants: {{ ActivityByType.participants }}</h3>
-            <button class="add-botton" v-on:click="addActivity(Activity)">Add to Favorites</button>
+            <button class="add-button" v-on:click="addActivity(Activity)">Add to Favorites</button>
         </div>
         <h1>Random Activity Idea:</h1>
         <div class="activity-box">
@@ -28,7 +28,7 @@
             <h2>Type: {{ Activity.type }}</h2>
             <h2>$ {{ Activity.price }}</h2>
             <h3>Number of participants: {{ Activity.participants }}</h3>
-            <button class="add-botton" v-on:click="addActivity(Activity)">Add to Favorites</button>
+            <button class="add-button" v-on:click="addActivity(Activity)">Add to Favorites</button>
         </div>
     </div>  
 </template>
@@ -86,12 +86,23 @@ import BackendService from '@/service/BackendService';
     background-color: rgb(179, 135, 220, 0.6);
 }
 
-.add-button :hover{
+.add-button{
+    border-radius: 5px;
     cursor: pointer;
+    padding: 3px;
+    border: 2px solid purple;
+    color: rgb(73, 12, 73);
+    background-color: rgb(206, 245, 225);
 }
 
 .get-activity{
+    margin-top: 5px;
     border-radius: 5px;
+    cursor: pointer;
+    padding: 5px;
+    border: 2px solid rgb(15, 80, 25);
+    color: rgb(12, 73, 17);
+    background-color: rgb(206, 245, 225);
 }
 
 </style>
