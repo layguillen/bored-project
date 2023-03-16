@@ -117,4 +117,8 @@ import BackendService from '@/service/BackendService';
     background-color: rgb(206, 245, 225);
 }
 
+fieldset {
+    border: none;
+}
+
 </style>
