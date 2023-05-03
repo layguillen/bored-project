@@ -4,7 +4,7 @@
             <div class="activity-info">
                 <h1>{{ activity.activity }}</h1>
                 <h2>Type: {{ activity.type }}</h2>
-                <p>Participants: {{ activity.participants }}</p>
+                <h3>Participants: {{ activity.participants }}</h3>
                 <p>Id: {{ activity.key }}</p>
                 <!-- <p>Cost: ${{ activity.price }}</p> -->
                 <button class="rm-button" v-on:click="removeActivity(activity.key)">Remove Activity</button>
@@ -45,16 +45,30 @@ import BackendService from '@/service/BackendService';
 <style scoped>
 
 .home-content{
-    /* display: flex;
-    flex-wrap: flex; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .activity-container{
     border: 2px solid rgb(165, 143, 243);
     border-radius: 10px;
-    margin: 30px 50px;
-    padding: 10px;
+    /* margin: 30px 50px; */
+    margin: 2% 2%;
+    padding: 15px;
     background-color: rgb(179, 135, 220, 0.6);
+}
+
+.activity-info h1{
+    color: rgb(46, 36, 235);
+}
+
+.activity-info h2{
+    color: rgb(38, 245, 44);
+}
+
+.activity-info h3{
+    color: rgba(200, 0, 255, 0.977);
 }
 
 .rm-button{

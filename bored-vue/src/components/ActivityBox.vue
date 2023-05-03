@@ -17,18 +17,18 @@
             </fieldset>
             <button v-on:click="getActivityByType(type)" class="get-activity">Get Activity</button>
             <div class="activity-by-type">
-                <h2>{{ ActivityByType.activity }}</h2>
-                <h2>Type: {{ ActivityByType.type }}</h2>
-                <h2>$ {{ ActivityByType.price }}</h2>
+                <h2 class="activity-name">{{ ActivityByType.activity }}</h2>
+                <h2 class="activity-type">Type: {{ ActivityByType.type }}</h2>
+                <h2 class="activity-price">$ {{ ActivityByType.price }}</h2>
                 <h3>Number of participants: {{ ActivityByType.participants }}</h3>
                 <button class="add-button" v-on:click="addActivity(Activity)">Add to Favorites</button>
             </div>
         </div>
         <h1>Random Activity Idea:</h1>
         <div class="activity-box">
-            <h2>{{ Activity.activity }}</h2>
-            <h2>Type: {{ Activity.type }}</h2>
-            <h2>$ {{ Activity.price }}</h2>
+            <h2 class="activity-name">{{ Activity.activity }}</h2>
+            <h2 class="activity-type">Type: {{ Activity.type }}</h2>
+            <h2 class="activity-price">$ {{ Activity.price }}</h2>
             <h3>Number of participants: {{ Activity.participants }}</h3>
             <button class="add-button" v-on:click="addActivity(Activity)">Add to Favorites</button>
         </div>
@@ -106,6 +106,18 @@ import BackendService from '@/service/BackendService';
     margin: 30px 50px;
     padding: 10px;
     background-color: rgb(179, 135, 220, 0.6);
+}
+
+.activity-name{
+    color: rgb(46, 36, 235);
+}
+
+.activity-type{
+    color: rgb(38, 245, 44);
+}
+
+.activity-price{
+    color: red;
 }
 
 .add-button{
