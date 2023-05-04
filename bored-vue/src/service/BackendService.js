@@ -9,6 +9,9 @@ export default{
     viewActivityFromAPI(){
         return http.get("/activity");
     },
+    viewArchieveFromAPI(){
+        return http.get("/archive");
+    },
     addActivityToDb(activity){
         return http.post("/add-activity", activity);
     },

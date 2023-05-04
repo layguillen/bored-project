@@ -32,7 +32,7 @@ public class JdbcActivityDao implements ActivityDao{
                 activity.getParticipants(), activity.getPrice(), activity.getKey());
 
 
-        return getActivityById(id); //verify that the movie object was written to the db
+        return getActivityById(id); //verify that the activity object was written to the db
     }
 
     @Override
@@ -40,7 +40,7 @@ public class JdbcActivityDao implements ActivityDao{
         String sql = " SELECT * FROM activity WHERE activity_id = ?";
         SqlRowSet result = jdbcTemplate.queryForRowSet(sql, id);
         if(result.next()){
-            return mapRowToMovie(result);
+            return mapRowToActivity(result);
         }
 
         return null;
@@ -54,7 +54,7 @@ public class JdbcActivityDao implements ActivityDao{
         SqlRowSet result = jdbcTemplate.queryForRowSet(sql);
         List<Activity> activityList = new ArrayList<>();
         while(result.next()){
-            activityList.add(mapRowToMovie(result));
+            activityList.add(mapRowToActivity(result));
         }
 
         return activityList;
@@ -67,7 +67,7 @@ public class JdbcActivityDao implements ActivityDao{
         jdbcTemplate.update(sql, activityKey);
     }
 
-    private Activity mapRowToMovie(SqlRowSet result){
+    private Activity mapRowToActivity(SqlRowSet result){
         Activity activity = new Activity();
         activity.setActivityId(result.getInt("activity_id"));
         activity.setActivity(result.getString("activity"));
