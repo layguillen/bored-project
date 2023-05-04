@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import BoredView from '../views/BoredView.vue'
+import ArchiveView from '../views/ArchiveView.vue'
 
 Vue.use(VueRouter)
 
@@ -24,6 +25,11 @@ const routes = [
     name: 'bored',
     component: BoredView
   },
+  {
+    path: '/archive',
+    name: 'archive',
+    component: ArchiveView
+  }
 ]
 
 const router = new VueRouter({

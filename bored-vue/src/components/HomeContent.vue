@@ -8,6 +8,7 @@
                 <p>Id: {{ activity.key }}</p>
                 <!-- <p>Cost: ${{ activity.price }}</p> -->
                 <button class="rm-button" v-on:click="removeActivity(activity.key)">Remove Activity</button>
+                <button class="archive-button" v-on:click=" archiveActivity(activity)" >Archive Activity</button>
             </div>
         </div>
     </div>
@@ -35,6 +36,15 @@ import BackendService from '@/service/BackendService';
                         alert("Activity removed");
                     } else{
                         alert("Activity was not removed");
+                    }
+                })
+            },
+            archiveActivity(activity){
+                BackendService.addActivityToArchive(activity).then((response) =>{
+                    if(response.status ===201){
+                        alert("Activity has been archived!");
+                    } else {
+                        alert("Activity was not archived.")
                     }
                 })
             }
@@ -72,6 +82,11 @@ import BackendService from '@/service/BackendService';
 }
 
 .rm-button{
+    background-color: azure;
+    border-radius: 5px;
+}
+
+.archive-button{
     background-color: azure;
     border-radius: 5px;
 }

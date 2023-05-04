@@ -9,9 +9,6 @@ export default{
     viewActivityFromAPI(){
         return http.get("/activity");
     },
-    viewArchieveFromAPI(){
-        return http.get("/archive");
-    },
     addActivityToDb(activity){
         return http.post("/add-activity", activity);
     },
@@ -23,6 +20,12 @@ export default{
     },
     getActivityByType(type){
         return http.get(`/activity/${type}`);
+    },
+    viewArchieveFromDb(){
+        return http.get("/archived-activities");
+    },
+    addActivityToArchive(activity){
+        return http.post("/add-archive", activity);
     }
 
     // getQuotesByMovie(id){

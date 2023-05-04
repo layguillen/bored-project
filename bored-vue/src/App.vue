@@ -8,6 +8,7 @@
           <router-link to="/">Home </router-link>  
           <router-link to="/about">About </router-link> 
           <router-link to="/bored">Bored?</router-link>
+          <router-link to="/archive">Archive</router-link>
         </div>
       </nav>
     </div>
