@@ -82,13 +82,18 @@ import BackendService from '@/service/BackendService';
 }
 
 .rm-button{
-    background-color: azure;
+    color: rgb(73, 12, 73);
+    background-color: rgb(246, 234, 235);
     border-radius: 5px;
+    margin-right: 5px;
+    cursor: pointer;
 }
 
 .archive-button{
-    background-color: azure;
+    color: rgb(73, 12, 73);
+    background-color: rgb(206, 245, 242);
     border-radius: 5px;
+    cursor: pointer;
 }
 
 

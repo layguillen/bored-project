@@ -117,7 +117,7 @@ import BackendService from '@/service/BackendService';
 }
 
 .activity-price{
-    color: red;
+    color: rgb(0, 255, 234);
 }
 
 .add-button{
